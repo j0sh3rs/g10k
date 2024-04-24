@@ -1,10 +1,10 @@
-FROM golang:1.17-alpine as builder
+FROM golang:1.22-alpine as builder
 WORKDIR /usr/src/g10k
 COPY . /usr/src/g10k
 RUN apk add --no-cache gcc make musl-dev git openssh bash && \
     make g10k
 
-FROM puppet/r10k:3.7.0
+FROM puppet/r10k:3.15.2
 COPY --from=builder /usr/src/g10k/g10k /usr/bin/
 COPY Dockerfile /Dockerfile
 LABEL org.label-schema.maintainer="Benjamin Kübler <g10k-docker@kuebler.email>" \
