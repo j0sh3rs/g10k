@@ -3,7 +3,7 @@ name: build_and_publish
 on:
   workflow_run:
     workflows: [tag_bump]
-    branches: [main]
+    branches: [master]
     types:
       - completed
 

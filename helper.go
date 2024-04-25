@@ -170,7 +170,7 @@ func purgeDir(dir string, callingFunction string) {
 	}
 }
 
-func executeCommand(command string, commandDir string, timeout int, allowFail bool, disableHttpProxy bool) ExecResult {
+func executeCommand(command string, commandDir string, timeout int, allowFail bool, disableHTTPProxy bool) ExecResult {
 	if len(commandDir) > 0 {
 		Debugf("Executing " + command + " in cwd " + commandDir)
 	} else {
@@ -193,7 +193,7 @@ func executeCommand(command string, commandDir string, timeout int, allowFail bo
 	if len(commandDir) > 0 {
 		execCommand.Dir = commandDir
 	}
-	if disableHttpProxy {
+	if disableHTTPProxy {
 		Debugf("found matching NO_PROXY URL, trying to disable http_proxy and https_proxy env variables for " + command)
 		// execCommand.Env = append(os.Environ(), "http_proxy=")
 		// execCommand.Env = append(os.Environ(), "https_proxy=")

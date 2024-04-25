@@ -3,7 +3,7 @@ name: tag_bump
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 jobs:
   tag:
