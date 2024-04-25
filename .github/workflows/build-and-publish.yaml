@@ -32,7 +32,7 @@ jobs:
         with:
           files: |
             go.*
-            main.go
+            *.go
             *goreleaser*
             *Dockerfile
       - name: Cache Go modules

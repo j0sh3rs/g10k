@@ -22,6 +22,7 @@ jobs:
           files: |
             go.*
             *.go
+            *Dockerfile*
 
       - name: Bump version and push tag
         if: steps.changed_files.outputs.any_changed == 'true'
