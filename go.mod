@@ -10,7 +10,7 @@ require (
 	github.com/remeh/sizedwaitgroup v1.0.0
 	github.com/tidwall/gjson v1.17.1
 	github.com/xorpaul/uiprogress v0.0.0-20201221143732-916122d4b58a
-	golang.org/x/sys v0.19.0
+	golang.org/x/sys v0.21.0
 	golang.org/x/term v0.19.0
 	gopkg.in/yaml.v2 v2.4.0
 )
